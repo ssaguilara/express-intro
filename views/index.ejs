@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina con EJS</title>
+  </head>
+  <body>
+    <h1>Pagina con Express</h1>
+    <!-- Lo bueno de estos archivos es que tienen incorporado render -->
+    <!--  el igual es para decir que recibimos un valor -->
+
+    <h2><%= title %></h2>
+
+    <!-- interpretar codigo JS -->
+    <% if (isActive) { %>
+    <p>El servidor esta activo</p>
+    <% } else { %>
+    <p>El servidor esta inactivo</p>
+    <% } %>
+
+    <ul>
+      <% for (let i = 0; i < users.length; i++) { %>
+        <li><%= i + 1 %>. <%= users[i].name %>   <%= users[i].lastname %></li>
+      <% } %>
+    </h2>
+  </body>
+</html>
